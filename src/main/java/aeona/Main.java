@@ -116,7 +116,7 @@ public class Main {
         public static Map<String, String> getQueryMap(String query) {
 
             try {
-                query = URLDecoder.decode(query, StandardCharsets.UTF_8.name());
+                query = URLDecoder.decode(query.split("\\?")[1], StandardCharsets.UTF_8.name());
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
